@@ -1,0 +1,11 @@
+header { height: 100vh; background: url('../img/bg1.jpg') center/cover no-repeat; border: 1px solid black; box-shadow: 5px 5px 5px black;  }
+body { margin: 2px;}
+#menu { list-style: none; display: flex; justify-content: space-around; background: rgba(0, 0, 0, 0.281); height: 7vh; align-items: center; }
+a {  text-decoration: none; font:  800 1.1em  Glory , serif; color: #f5deb3; text-shadow: 1px 1px 1px black;}
+#burger { display: none; }
+
+@media only screen and (max-width: 768px) {
+    #menu { display: none; }
+    #burger {  background: none; outline: none; border: none ; display: block; position: absolute; left: 80%; top: 10% }
+    .fas { font-size: 7vw;   }
+}

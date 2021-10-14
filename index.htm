@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/s.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@1,800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+        <title>Menu</title>
+    </head>
+    <body>
+        <div>
+            <header>
+                <button id="burger" ><i class="fas fa-ellipsis-h"></i></button>
+                <nav>
+                    <ul id="menu">
+                        <a href=""><li>Menu</li></a>
+                        <a href=""><li>About us</li></a>
+                        <a href=""><li>Gallery</li></a>
+                        <a href=""><li>Contacts</li></a>  
+                    </ul>
+                </nav>
+            </header>
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script>
+            $( ()=>{
+                let width = $(window).width();
+                
+                
+                if ( width < 767 ){
+                    $("#burger")
+                        .click( function(){
+                            $("#menu").animate({ "margin" : "0" });
+                            $("#menu").animate({ "height": "100vh", "paddingTop" : "20%" });
+                            $("#menu").slideToggle(500);
+                            $("li").animate({"fontSize" : "1.5em"});
+                            $(".fas").animate( {"fontSize": "10vw"},"slow");
+                            $(".fas").animate( {"fontSize": "7vw"},"slow");
+                        });
+
+
+                       
+                };
+            });
+            
+        </script>
+    </body>
+</html>
